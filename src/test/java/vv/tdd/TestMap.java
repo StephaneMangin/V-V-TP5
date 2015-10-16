@@ -271,9 +271,13 @@ public class TestMap<K, V> {
         assertTrue(set.containsAll(map.values()) && map.values().containsAll(set));
     }
 
-    @Test(expected=NotImplementedException.class)
+    @Test
     public void testEntrySet() {
-        map.entrySet();
+        List<Integer> set = new ArrayList<Integer>();
+        map.put("1", 1);
+        map.put("2", 12);
+        Set<Map.Entry<String, Integer>> entrySet = map.entrySet();
+        assertEquals(2, entrySet.size());
     }
 
 
