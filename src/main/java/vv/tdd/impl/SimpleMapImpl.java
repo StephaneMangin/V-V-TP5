@@ -74,6 +74,8 @@ public class SimpleMapImpl<K,V> implements Map<K,V> {
 
     @Override
     public void putAll(Map<? extends K, ? extends V> m) {
+        keys.addAll(m.keySet());
+        values.addAll(m.values());
 
     }
 
