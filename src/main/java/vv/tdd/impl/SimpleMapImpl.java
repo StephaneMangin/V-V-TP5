@@ -4,10 +4,10 @@ import java.util.*;
 
 public class SimpleMapImpl<K,V> implements Map<K,V> {
 
-    private ArrayList<K> keys;
-    private ArrayList<V> values;
+    protected ArrayList<K> keys;
+    protected ArrayList<V> values;
 
-    private int getIndex(Object obj) {
+    protected int getIndex(Object obj) {
         return keys.indexOf(obj);
     }
 
