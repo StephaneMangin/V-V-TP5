@@ -97,7 +97,11 @@ public class SimpleMapImpl<K,V> implements Map<K,V> {
 
     @Override
     public Set<Entry<K, V>> entrySet() {
-        return null;
+        HashSet<Entry<K, V>> set = new HashSet<Entry<K, V>>();
+        for (K key: keys) {
+            set.add(new AbstractMap.SimpleEntry<K, V>(key, get(key)));
+        }
+        return set;
     }
 
     @Override
