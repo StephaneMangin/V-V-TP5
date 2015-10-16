@@ -79,6 +79,8 @@ public class SimpleMapImpl<K,V> implements Map<K,V> {
 
     @Override
     public void clear() {
+        keys.clear();
+        values.clear();
     }
 
     @Override
