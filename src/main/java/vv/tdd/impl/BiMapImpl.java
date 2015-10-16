@@ -7,6 +7,9 @@ public class BiMapImpl<K,V> extends SimpleMapImpl<K,V> implements vv.tdd.BiMap<K
 
     @Override
     public K getByValue(Object value) {
+        if (values.contains(value)) {
+            return keys.get(values.indexOf(value));
+        }
         return null;
     }
 
