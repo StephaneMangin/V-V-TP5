@@ -23,7 +23,7 @@ public class SimpleMapImpl<K,V> implements Map<K,V> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return keys.isEmpty();
     }
 
     @Override
