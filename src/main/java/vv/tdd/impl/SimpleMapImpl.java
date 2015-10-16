@@ -97,4 +97,18 @@ public class SimpleMapImpl<K,V> implements Map<K,V> {
     public Set<Entry<K, V>> entrySet() {
         return null;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof SimpleMapImpl)) return false;
+        SimpleMapImpl<?, ?> simpleMap = (SimpleMapImpl<?, ?>) o;
+        return Objects.equals(keys, simpleMap.keys) &&
+                Objects.equals(values, simpleMap.values);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(keys, values);
+    }
 }
