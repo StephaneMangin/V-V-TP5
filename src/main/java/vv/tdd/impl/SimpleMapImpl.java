@@ -85,12 +85,12 @@ public class SimpleMapImpl<K,V> implements Map<K,V> {
 
     @Override
     public Set<K> keySet() {
-        return null;
+        return new HashSet<K>(keys);
     }
 
     @Override
     public Collection<V> values() {
-        return null;
+        return values;
     }
 
     @Override
