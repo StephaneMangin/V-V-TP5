@@ -28,12 +28,12 @@ public class SimpleMapImpl<K,V> implements Map<K,V> {
 
     @Override
     public boolean containsKey(Object key) {
-        return false;
+        return keys.contains(key);
     }
 
     @Override
     public boolean containsValue(Object value) {
-        return false;
+        return values.contains(value);
     }
 
     @Override
