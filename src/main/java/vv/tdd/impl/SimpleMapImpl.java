@@ -18,7 +18,7 @@ public class SimpleMapImpl<K,V> implements Map<K,V> {
 
     @Override
     public int size() {
-        return 0;
+        return keys.size();
     }
 
     @Override
@@ -62,6 +62,13 @@ public class SimpleMapImpl<K,V> implements Map<K,V> {
 
     @Override
     public V remove(Object key) {
+        if (keys.contains(key)) {
+            int index = getIndex(key);
+            keys.remove(index);
+            V previousValue = values.get(index);
+            values.remove(index);
+            return previousValue;
+        }
         return null;
     }
 
