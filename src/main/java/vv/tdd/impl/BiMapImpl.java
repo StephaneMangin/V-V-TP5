@@ -15,6 +15,8 @@ public class BiMapImpl<K,V> extends SimpleMapImpl<K,V> implements vv.tdd.BiMap<K
 
     @Override
     public K removeValue(Object value) {
-        return null;
+        K key = getByValue(value);
+        remove(key);
+        return key;
     }
 }
